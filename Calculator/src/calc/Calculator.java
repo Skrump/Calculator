@@ -9,10 +9,10 @@ import java.util.Scanner;
  * This class uses a Scanner and basic conditional controls to maintain the flow of logic.
  */
 public class Calculator {
-	private String manufacturer = "Skrum Industries";
-	private String softwareVersion = "1.0";
-	private String model = "Skrumpulator";
-	private String yearReleased = "2020";
+	protected String manufacturer = "Skrum Industries";
+	protected String softwareVersion = "1.0";
+	protected String model = "Skrumpulator";
+	protected String yearReleased = "2020";
 	
 	/**
 	 * The main method for this class. It is the only method to be called by a user and will
@@ -21,7 +21,7 @@ public class Calculator {
 	public void run()
 	{
 		boolean end;
-		System.out.println(model + " was manufactored by " + manufacturer + ".\nCurrent version: " + softwareVersion
+		System.out.println(model + " was manufactured by " + manufacturer + ".\nCurrent version: " + softwareVersion
 				+ "\nReleased in " + yearReleased);
 		Scanner sc = new Scanner(System.in);
 		try {
@@ -47,7 +47,7 @@ public class Calculator {
 	 * @param sc Scanner object that will be used to take user input.
 	 * @return true if the user wants to end the program, returns false if the user opts to do an operation.
 	 */
-	private boolean chooseOper(Scanner sc)
+	protected boolean chooseOper(Scanner sc)
 	{
 		System.out.println("\nPlease choose which function you would like to use:");
 		System.out.println("1) Addition\n2) Subtraction\n3) Multiplication\n4) Division\n5) Modulo\n6) Exit");
@@ -93,7 +93,7 @@ public class Calculator {
 	 * Precondition: Scanner sc is a valid Scanner and the prompt is a non-null String.
 	 * Postcondition: The user's number is taken and returned to the calling method.
 	 */
-	private double enterNum(Scanner sc, String prompt)
+	protected double enterNum(Scanner sc, String prompt)
 	{
 		double num = 0;
 		String in = "";
@@ -121,7 +121,7 @@ public class Calculator {
 	 * the console.
 	 * @param sc Scanner used to take user input.
 	 */
-	private void sAdd(Scanner sc)
+	protected void sAdd(Scanner sc)
 	{
 		double num1 = enterNum(sc, "first number");
 		double num2 = enterNum(sc, "second number");
@@ -133,7 +133,7 @@ public class Calculator {
 	 * the console.
 	 * @param sc Scanner used to take user input.
 	 */
-	private void sSub(Scanner sc)
+	protected void sSub(Scanner sc)
 	{
 		double num1 = enterNum(sc, "first number");
 		double num2 = enterNum(sc, "second number");
@@ -145,7 +145,7 @@ public class Calculator {
 	 * the console.
 	 * @param sc Scanner used to take user input.
 	 */
-	private void sMult(Scanner sc)
+	protected void sMult(Scanner sc)
 	{
 		double num1 = enterNum(sc, "first number");
 		double num2 = enterNum(sc, "second number");
@@ -157,7 +157,7 @@ public class Calculator {
 	 * the console.
 	 * @param sc Scanner used to take user input.
 	 */
-	private void sDiv(Scanner sc)
+	protected void sDiv(Scanner sc)
 	{
 		double num1 = enterNum(sc, "numerator");
 		double num2 = enterNum(sc, "denominator");
@@ -169,7 +169,7 @@ public class Calculator {
 	 * the console.
 	 * @param sc Scanner used to take user input.
 	 */
-	private void sMod(Scanner sc)
+	protected void sMod(Scanner sc)
 	{
 		double num1 = enterNum(sc, "first");
 		double num2 = enterNum(sc, "second");
@@ -184,7 +184,7 @@ public class Calculator {
 	 * Precondition: parameters are real numbers.
 	 * Postcondition: parameters will be added and returned.
 	 */
-	private double add(double num1, double num2)
+	protected double add(double num1, double num2)
 	{
 		return num1 + num2;
 	}
@@ -197,7 +197,7 @@ public class Calculator {
 	 * Precondition: parameters are real numbers.
 	 * Postcondition: parameters will be subtracted and returned.
 	 */
-	private double sub(double num1, double num2)
+	protected double sub(double num1, double num2)
 	{
 		return num1 - num2;
 	}
@@ -210,7 +210,7 @@ public class Calculator {
 	 * Precondition: parameters are real numbers.
 	 * Postcondition: parameters will be multiplied and returned.
 	 */
-	private double mult(double num1, double num2)
+	protected double mult(double num1, double num2)
 	{
 		return num1 * num2;
 	}
@@ -223,7 +223,7 @@ public class Calculator {
 	 * Precondition: parameters are real numbers.
 	 * Postcondition: parameters will be divided and returned.
 	 */
-	private double div(double num1, double num2)
+	protected double div(double num1, double num2)
 	{
 		return num1 / num2;
 	}
@@ -236,7 +236,7 @@ public class Calculator {
 	 * Precondition: parameters are real numbers.
 	 * Postcondition: parameters will be divided and the remainder will be returned.
 	 */
-	private double mod(double num1, double num2)
+	protected double mod(double num1, double num2)
 	{
 		return num1 % num2;
 	}

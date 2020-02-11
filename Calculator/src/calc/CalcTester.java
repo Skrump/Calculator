@@ -13,6 +13,8 @@ public class CalcTester {
 	 */
 	public static void main(String[] args) {
 		Calculator calc = new Calculator();
-		calc.run();
+//		calc.run();
+		Calculator sCalc = new SciCalculator();
+		sCalc.run();
 	}
 }
